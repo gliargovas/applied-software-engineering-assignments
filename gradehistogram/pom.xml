@@ -27,7 +27,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>HistogramGenerator</mainClass>
+                            <mainClass>histogramgenerator/HistogramGenerator</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
