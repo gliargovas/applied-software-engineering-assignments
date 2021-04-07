@@ -33,14 +33,15 @@ class HistogramGenerator {
             System.exit(1);
         }
         int[] grades = h.scanGrades(args[0]);
-        h.generateChart(grades);
+        int[] frequencies = h.countGrades(grades);
+        h.generateChart(frequencies);
     }
 
     /**
      * Scan grades the grades from a file and return them as an array.
      *
-     * @param filepath the path of the grades file.
-     * @return the int [ ] array with the grades.
+     * @param filepath the path of the grades file
+     * @return the int [ ] array with the grades
      */
     public int[] scanGrades(String filepath) {
         Scanner scanner = null;
@@ -60,10 +61,25 @@ class HistogramGenerator {
         return gradeArray;
     }
 
+
+    /**
+     * Count grades and return an array with the counted frequencies.
+     *
+     * @param grades the grades
+     * @return the int [ ] array with the grade frequencies
+     */
+    public int[] countGrades(int[] grades) {
+        int[] gradeFrequencies = new int[11];
+        for (int grade : grades) {
+            gradeFrequencies[grade]++;
+        }
+        return gradeFrequencies;
+    }
+
     /**
      * Generate chart.
      *
-     * @param dataValues the data values
+     * @param dataValues an array with the grade frequencies
      */
     public void generateChart(int[] dataValues) {
 
@@ -84,7 +100,7 @@ class HistogramGenerator {
         boolean urls = false; // do not visualize urls
 
         // Declare and initialize a createXYLineChart JFreeChart
-        JFreeChart chart = ChartFactory.createHistogram("Grades", "Student", "Grade", dataset,
+        JFreeChart chart = ChartFactory.createHistogram("Grades", "Grade", "Frequency", dataset,
                 PlotOrientation.VERTICAL, legend, tooltips, urls);
 
         /*
