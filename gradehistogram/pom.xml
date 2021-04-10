@@ -10,7 +10,9 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>gradehistogram</artifactId>
     <name>Grade histogram</name>
-    <description>A simple module for plotting student grade distribution</description>
+    <description>A module for plotting student grade distribution from a grade file. This module is a part of the 2nd
+        assignment of the 2021 Applied Software Engineering course.
+    </description>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.jfree/jfreechart -->

@@ -15,6 +15,6 @@
         <module>gradehistogram</module>
     </modules>
     <packaging>pom</packaging>
-    <name>Assignment 2</name>
-    <description>A maven project of the second ASE2021 course assignment</description>
+    <name>Applied software engineering assignments</name>
+    <description>The maven project of the 2021 Applied Software Engineering course.</description>
 </project>
