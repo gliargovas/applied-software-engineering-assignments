@@ -3,6 +3,7 @@
 This repository contains the implementation of the lab assignments for the 2021 Applied Software Engineering course. The repository consists of the following:
 
 * The **grade histogram** module, which is used for generating a histogram with student grades from a file.
+* The **[unit testing](unittesting/README.md)** module, which is about getting familiar with JUnit.
 
 # Technologies and tools
 
