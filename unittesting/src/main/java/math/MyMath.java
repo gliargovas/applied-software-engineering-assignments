@@ -1,10 +1,11 @@
 package math;
 
 /**
- * The class My math.
+ * Simple implementation of the calculation of a number's factorial that serves as hands-on practice on Unit Testing.
  *
  * @author George Liargkovas
  * @version 1.0
+ * @since 2020-04-23
  */
 public class MyMath {
 
