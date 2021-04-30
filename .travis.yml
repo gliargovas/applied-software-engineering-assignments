@@ -9,7 +9,6 @@ branches:
     - main
 
 before_script:
-  - cd project
   - ls -la
 
 script:
