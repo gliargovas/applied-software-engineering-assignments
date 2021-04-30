@@ -45,4 +45,4 @@ In order to generate a histogram from a grade file using histogram generator, fr
 
     java -jar .\gradehistogram\target\gradehistogram-1.0-SNAPSHOT-jar-with-dependencies.jar <FILE_PATH>
 
-where `<FILE_PATH>` the relative or absolut path to the grades file.
+where `<FILE_PATH>` the relative or absolute path to the grades file.
