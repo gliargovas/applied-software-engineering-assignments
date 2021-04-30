@@ -6,12 +6,14 @@ jdk:
 branches:
   only:
     - development
+    - main
 
 before_script:
+  - cd project
   - ls -la
 
 script:
-  - mvn clean package
+  - mvn clean package jacoco:report
 
 after_success:
   - echo "Process terminated successfully."
