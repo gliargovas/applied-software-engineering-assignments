@@ -64,5 +64,11 @@ public class ArithmeticOperationsTest {
         ao.multiply(-2, 10);
     }
 
+    @Test
+    public void test_multiply_negativeSecondNumber() {
+        thrown.expect(IllegalArgumentException.class);
+        thrown.expectMessage("x & y should be >= 0");
+        ao.multiply(2, -10);
+    }
 
 }
