@@ -22,7 +22,7 @@ public class ArrayOperationsTest {
         when(mm.isPrime(8)).thenReturn(false);
 
         FileIO io = mock(FileIO.class);
-        when(io.readFileModified("filepath")).thenReturn(new int[]{2, 3, 4, 5, 6, 7, 8});
+        when(io.readFile("filepath")).thenReturn(new int[]{2, 3, 4, 5, 6, 7, 8});
 
         Assert.assertArrayEquals(new int[]{2, 3, 5, 7}, ao.findPrimesInFile(io, "filepath", mm));
     }
