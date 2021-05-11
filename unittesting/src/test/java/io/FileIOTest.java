@@ -37,14 +37,9 @@ public class FileIOTest {
 
     @Test
     public void testReadFileContainsInvalidEntries() {
-        this.thrown.expect(NumberFormatException.class);
-        this.fileIO.readFile(resourcesPath.concat("invalid_entries.txt"));
-    }
-
-    @Test
-    public void testReadFileModifiedContainsInvalidEntries() {
         int[] expectedNums = new int[]{12, 13, 7, -5, -9, 1, -9999};
         String validInputFilepath = resourcesPath.concat("invalid_entries.txt");
-        Assert.assertArrayEquals(expectedNums, this.fileIO.readFileModified(validInputFilepath));
+        Assert.assertArrayEquals(expectedNums, this.fileIO.readFile(validInputFilepath));
     }
+
 }
