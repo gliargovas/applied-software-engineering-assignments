@@ -25,7 +25,7 @@ public class ArrayOperations {
      * @throws IllegalArgumentException when a number less than 2 exists in the array
      */
     public int[] findPrimesInFile(FileIO fileIo, String filepath, MyMath myMath) {
-        int[] nums = fileIo.readFileModified(filepath);
+        int[] nums = fileIo.readFile(filepath);
         ArrayList<Integer> prime_nums = new ArrayList<Integer>();
         for (int num : nums) {
             if (myMath.isPrime(num)) {
