@@ -26,7 +26,12 @@ public class ArithmeticOperationsTest {
     }
 
     @Test
-    public void test_divide_zeroNumerator() {
+    public void test_divide_zeroToPositiveNumerator() {
+        Assert.assertEquals(0, ao.divide(0, 2), 0);
+    }
+
+    @Test
+    public void test_divide_zeroToNegativeNumerator() {
         Assert.assertEquals(0, ao.divide(0, -2), 0);
     }
 
@@ -36,8 +41,18 @@ public class ArithmeticOperationsTest {
     }
 
     @Test
-    public void test_multiply_zero() {
+    public void test_multiply_zeroFirst() {
         Assert.assertEquals(0, ao.multiply(0, 4));
+    }
+
+    @Test
+    public void test_multiply_zeroSecond() {
+        Assert.assertEquals(0, ao.multiply(2, 0));
+    }
+
+    @Test
+    public void test_multiply_BothZeros() {
+        Assert.assertEquals(0, ao.multiply(0, 0));
     }
 
     @Test
@@ -48,6 +63,11 @@ public class ArithmeticOperationsTest {
     @Test(expected = ArithmeticException.class)
     public void test_divide_zeroDenominator() {
         ao.divide(5, 0);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void test_divide_bothZero() {
+        ao.divide(0, 0);
     }
 
     @Test
@@ -70,5 +90,5 @@ public class ArithmeticOperationsTest {
         thrown.expectMessage("x & y should be >= 0");
         ao.multiply(2, -10);
     }
-
+    
 }
