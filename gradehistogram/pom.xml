@@ -13,9 +13,7 @@
     <description>A module for plotting student grade distribution from a grade file. This module is a part of the 2nd
         assignment of the 2021 Applied Software Engineering course.
     </description>
-
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.jfree/jfreechart -->
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>jfreechart</artifactId>

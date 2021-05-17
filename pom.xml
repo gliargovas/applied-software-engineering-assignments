@@ -13,8 +13,26 @@
     </properties>
     <modules>
         <module>gradehistogram</module>
+        <module>unittesting</module>
     </modules>
     <packaging>pom</packaging>
     <name>Applied software engineering assignments</name>
     <description>The maven project of the 2021 Applied Software Engineering course.</description>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.6</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
