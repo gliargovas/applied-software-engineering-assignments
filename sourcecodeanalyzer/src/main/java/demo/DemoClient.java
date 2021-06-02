@@ -12,7 +12,6 @@ public class DemoClient {
 		String sourceFileLocation = "local";
 		String outputFilePath = "output_metrics";
 		String outputFileType = "csv";
-		System.out.println(args.length);
 		if (args.length == 5) {
 			filepath = args[0];
 			sourceCodeAnalyzerType = args[1];
