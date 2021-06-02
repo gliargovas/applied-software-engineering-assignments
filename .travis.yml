@@ -15,5 +15,8 @@ script:
   - mvn clean package jacoco:report
 
 after_success:
+  - java -jar sourcecodeanalyzer/target/sourcecodeanalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar sourcecodeanalyzer/src/test/resources/TestClass.java regex local sourcecodeanalyzer/target/metrics_results csv
+  - echo "Metrics \n"
+  - cat
   - echo "Process terminated successfully."
 
