@@ -9,12 +9,11 @@ branches:
     - main
 
 before_script:
-  - ls -la
+  - echo 21,3,3, > expected_output.txt
 
 script:
   - mvn clean package jacoco:report
 
 after_success:
-  - cat `java -jar sourcecodeanalyzer/target/sourcecodeanalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar sourcecodeanalyzer/src/test/resources/TestClass.java regex local sourcecodeanalyzer/target/metrics_results csv | cut -d " " -f 4`
-  - echo "Process terminated successfully."
-
+  - tail -1 `java -jar sourcecodeanalyzer/target/sourcecodeanalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar sourcecodeanalyzer/src/test/resources/TestClass.java regex local sourcecodeanalyzer/target/metrics_results csv | cut -d " " -f 4` > output.txt
+  - diff -q expected_output.txt output.txt
